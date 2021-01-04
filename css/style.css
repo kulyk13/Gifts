@@ -347,6 +347,7 @@ a:focus-within {
 .btn.burger-btn {
   min-width: auto;
   display: none;
+  background-color: transparent;
 }
 .btn.burger-btn.close {
   position: absolute;
@@ -689,6 +690,11 @@ h1 {
   .btn.burger-btn {
     display: inline-flex;
   }
+  .btn.burger-btn:hover,
+  .btn.burger-btn:focus-within {
+    color: #fff;
+    background: var(--theme-color);
+  }
   .burger-menu {
     position: fixed;
     left: 0;
@@ -751,6 +757,7 @@ h1 {
   }
   .footer-logo {
     margin: 0;
+    order: -1;
   }
   .footer-menu > li:nth-child(3n + 2) {
     margin-left: 0;
@@ -764,6 +771,9 @@ h1 {
   .container {
     max-width: 100%;
   }
+  .header {
+    padding: 10px 0;
+  }
   .article {
     padding: 30px 0;
   }
@@ -771,6 +781,16 @@ h1 {
     padding: 10px;
     min-width: 110px;
     font-size: 12px;
+  }
+  .btn.burger-btn.close {
+    right: 10px;
+    top: 10px;
+  }
+  .burger-menu {
+    padding: 35px;
+  }
+  .burger-menu > .menu > li {
+    margin: 0 0 5px 0;
   }
   .hero-text {
     width: 100%;
@@ -806,8 +826,13 @@ h1 {
   .cta-content {
     flex-direction: column;
   }
+  .cta-right-side {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+  }
   .cta-right-side > a:first-of-type {
-    margin: 10px 0;
+    margin: 0 10px 0 0;
   }
   .banner {
     flex-direction: column;
@@ -838,10 +863,10 @@ h1 {
     margin-bottom: 30px;
   }
   .social-networks > li:nth-child(n + 2) {
-    margin-left: 15px;
+    margin-left: 20px;
   }
   .awesome {
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 /* XS-Small devices (iPhone5/5s, SE, equals to 320px) */
